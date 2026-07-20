@@ -64,17 +64,28 @@ function StudentViewCoursesPage() {
   async function fetchAllStudentViewCourses(filters, sort) {
     // Build query string properly - filters have arrays that need to be joined
     const queryParams = new URLSearchParams();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 3d1bbd6196bf1e08bbf4e352fcdeea1cddfcf92e
     // Add filter parameters (join arrays with commas as backend expects)
     for (const [key, value] of Object.entries(filters)) {
       if (Array.isArray(value) && value.length > 0) {
         queryParams.set(key, value.join(","));
       }
     }
+<<<<<<< HEAD
 
     // Add sort parameter
     queryParams.set("sortBy", sort);
 
+=======
+    
+    // Add sort parameter
+    queryParams.set("sortBy", sort);
+    
+>>>>>>> 3d1bbd6196bf1e08bbf4e352fcdeea1cddfcf92e
     const response = await fetchStudentViewCourseListService(queryParams.toString());
 
     if (response?.success) {

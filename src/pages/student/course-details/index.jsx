@@ -45,7 +45,11 @@ function StudentViewCourseDetailsPage() {
     const checkCoursePurchaseInfoResponse =
       await checkCoursePurchaseInfoService(
         currentCourseDetailsId,
+<<<<<<< HEAD
         auth?.user?._id
+=======
+        auth?.user._id
+>>>>>>> 3d1bbd6196bf1e08bbf4e352fcdeea1cddfcf92e
       );
 
     if (
@@ -138,8 +142,13 @@ function StudentViewCourseDetailsPage() {
   const getIndexOfFreePreviewUrl =
     studentViewCourseDetails !== null
       ? studentViewCourseDetails?.curriculum?.findIndex(
+<<<<<<< HEAD
         (item) => item.freePreview
       )
+=======
+          (item) => item.freePreview
+        )
+>>>>>>> 3d1bbd6196bf1e08bbf4e352fcdeea1cddfcf92e
       : -1;
 
   return (
@@ -197,10 +206,18 @@ function StudentViewCourseDetailsPage() {
               {studentViewCourseDetails?.curriculum?.map(
                 (curriculumItem, index) => (
                   <li
+<<<<<<< HEAD
                     className={`${curriculumItem?.freePreview
                         ? "cursor-pointer"
                         : "cursor-not-allowed"
                       } flex items-center mb-4`}
+=======
+                    className={`${
+                      curriculumItem?.freePreview
+                        ? "cursor-pointer"
+                        : "cursor-not-allowed"
+                    } flex items-center mb-4`}
+>>>>>>> 3d1bbd6196bf1e08bbf4e352fcdeea1cddfcf92e
                     onClick={
                       curriculumItem?.freePreview
                         ? () => handleSetFreePreview(curriculumItem)
@@ -227,8 +244,13 @@ function StudentViewCourseDetailsPage() {
                   url={
                     getIndexOfFreePreviewUrl !== -1
                       ? studentViewCourseDetails?.curriculum[
+<<<<<<< HEAD
                         getIndexOfFreePreviewUrl
                       ].videoUrl
+=======
+                          getIndexOfFreePreviewUrl
+                        ].videoUrl
+>>>>>>> 3d1bbd6196bf1e08bbf4e352fcdeea1cddfcf92e
                       : ""
                   }
                   width="450px"
